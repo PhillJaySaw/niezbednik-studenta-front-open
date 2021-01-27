@@ -1,0 +1,126 @@
+@import '../../style.scss';
+
+.main {
+    height: calc(100vh - 62px);
+    display: flex;
+}
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tile {
+    max-width: 22rem;
+    height: 14rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px #00000029;
+    transition: all .4s ease-out;
+    grid-column: span 2;
+
+    p {
+        font-family: 'Lato', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: -0.5rem;
+        right: 1.5rem;
+        font-size: 20px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    transform: rotate(-45deg);
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 40px solid #000;
+    opacity: 0.2;
+    position: absolute;
+    top: -5px;
+    left: -25px;
+}
+
+.user-icon {
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    font-size: 45px;
+    color: white;
+}
+
+.tile-path {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img {
+        height: 60%;
+        margin: auto;
+    }
+}
+
+@media(min-width:1050px) {
+    .tiles__odd {
+        .tile:nth-last-child(2) {
+            grid-column: 2/4;
+        }
+    }
+}
+
+@media(max-width:1050px) {
+    .tiles {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2rem;
+        padding: 3rem 0;
+        margin: auto;
+    }
+
+    .tile {
+        height: 9rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    .tile-path img {
+        padding-bottom: 1rem;
+        box-sizing: content-box;
+        height: 55%;
+    }
+}
+
+@media(max-width:750px) {
+    .tile {
+        p {font-size: 1.1rem;}
+    }
+
+    .user-icon {
+        font-size: 2rem;
+        bottom: 2.5rem;
+    }
+}
+
+@media(max-width:650px) {
+    .tiles, .tiles-title-container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
+    }
+
+    .tile {
+        grid-column: 1;
+        p {font-size: 1.2rem;}
+        height: 4rem;
+        > .tile-path > img {
+            display: none;
+        }
+    }
+}

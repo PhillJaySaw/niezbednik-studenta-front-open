@@ -1,0 +1,16 @@
+.user-list-element {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  .list-element-name {
+    cursor: default !important;
+  }
+}
+
+.user-list-element {
+  cursor: pointer;
+  .list-element-name {
+    cursor: pointer !important;
+  }
+}

@@ -1,0 +1,114 @@
+@import '../../../MainPage/style.scss';
+
+.modal-post-window {
+  font-size: 1rem;
+
+  #textarea {
+    cursor: auto;
+  }
+
+  .decoration-strip {
+    height: 0;
+    margin-bottom: 0;
+  }
+
+  .modal-post-header {
+    background-color: $ns-main-color;
+  }
+
+  .post-reactions {
+    padding-bottom: 0.5rem;
+  }
+
+  .delete-post {
+    grid-row: 1;
+    grid-column: 3;
+    text-align: right;
+    margin: 0 2rem 0.5rem 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $ns-main-color;
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .forum-post {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    margin-top: 1rem;
+    border: none;
+  }
+
+  .add-post-button {
+    margin: 0 2rem 1rem auto;
+    height: 2rem;
+    line-height: 1.5rem;
+    > p {
+      padding: 0 0.5rem;
+    }
+  }
+
+  .forum-post .post-comments, .post-author, .post-publication-date {
+    cursor: default;
+  }
+
+  @media (max-width: 550px) {
+    .add-comment-button {
+    }
+  }
+
+  @media (max-width: 400px) {
+    .forum-post {
+      .post-options, .delete-post {
+      padding-right: 1rem !important;
+      }
+      .post-comment {
+        margin: 0 1rem;
+      }
+      .comments {
+        .comments-header {
+          grid-column-gap: 2rem;
+          grid-row-gap: 1rem;
+          flex-wrap: wrap;
+          .button {
+            margin: auto;
+          }
+        }
+        > p {
+          margin: 0 1rem 1rem;
+        }
+        .post-options {
+          padding-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.edit-post-button {
+  padding: 0.5rem 1rem;
+  line-height: 0.5rem;
+  font-size: 1rem;
+  > p {
+    padding: 0 0.5rem !important;
+  }
+}
+
+.modal-post-window .forum-post, .notice-post {
+  .post-reactions, .post-options {
+    grid-column: 2 / 4;
+  }
+
+  .post-options {
+    padding: 0 2rem 0.5rem;
+    text-align: right;
+    white-space: nowrap;
+    color: $gray02;
+    * {
+      display: inline;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+}

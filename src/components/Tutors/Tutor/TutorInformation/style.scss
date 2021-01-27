@@ -1,0 +1,126 @@
+@import '../../../MainPage/style.scss';
+
+.tutor-modal {
+  max-width: 700px;
+  margin: 0 auto;
+
+  .tutor-information {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: $font-darkgray;
+    margin: 1rem 2rem;
+
+    .edit-tutor-button {
+      text-align: right;
+      font-size: 14px;
+      color: #5467e6;
+      cursor: pointer;
+    }
+
+    .list-element-name-tutor-title {
+      width: 100%;
+      font-size: 22px;
+      margin-right: 2rem;
+    }
+
+    .tutor-title-information {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    span {
+      font-weight: bolder;
+    }
+
+    .tutor-courses-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      color: $ns-main-color;
+      font-size: 20px;
+
+      .tutor-courses {
+        margin-right: 0.5rem;
+
+        .tutors-line {
+          background-color: $ns-main-color;
+          height: 1px;
+          width: 41px;
+        }
+
+        .tutor-courses-name {
+          color: $font-black;
+          list-style-type: none;
+          font-size: 18px;
+          margin-top: 0.5rem;
+
+          li {
+            padding-bottom: 0.5rem;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .tutor-courses-links {
+        .tutors-line {
+          background-color: $ns-main-color;
+          height: 1px;
+          width: 41px;
+        }
+
+        .tutor-courses-links-list {
+          font-size: 18px;
+          margin-top: 0.5rem;
+          color: #25283d;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          ul {
+            li {
+              list-style-type: none;
+              color: #91aeff;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              width: 100%;
+
+              a {
+                color: #91aeff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .tutor-modal {
+    .tutor-information {
+      .list-element-name-tutor-title {
+        font-size: 22px;
+      }
+
+      .tutor-title-information {
+        font-size: 14px;
+      }
+
+      .tutor-courses-container {
+        font-size: 16px;
+
+        .tutor-courses {
+          .tutor-courses-name {
+            font-size: 14px;
+          }
+        }
+
+        .tutor-courses-links {
+          .tutor-courses-links-list {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

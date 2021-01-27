@@ -1,0 +1,66 @@
+@import '../../MainPage/style.scss';
+
+.user-modal {
+    max-width: 800px !important;
+    .form-control {
+        border: none;
+        border-bottom: 1px solid lighten(black, 85%);
+        background-color: transparent;
+        font-weight: 300;
+        border-radius: 0;
+    }
+    label {
+        margin-bottom: 0;
+    }
+    .user-email-display {
+        padding-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        grid-row-gap: 1rem;
+        > * {
+            display: inline-block;
+        }
+        .user-email-address {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+    }
+    .user-email {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
+    .save-button {
+        height: 2rem;
+        line-height: 2rem;
+        margin-left: 1rem;
+        padding: 0 1.5rem;
+        box-shadow: none;
+        background-color: $ns-main-color;
+        color: white;
+    }
+    .email-icon {
+        font-size: 1.2rem;
+    }
+    .pen-icon {
+        color: $ns-main-color;
+        margin-left: 0.5rem;
+        cursor: pointer;
+    }
+    .copy-tooltip__hidden {
+        display: none;
+    }
+}
+
+.email-button, .email-button:hover, .interested-button {
+    height: 2.1rem;
+    background-color: $ns-main-color;
+    color: white;
+    line-height: 2rem;
+    margin-left: 1rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    svg {
+        margin-bottom: -2px;
+        margin-right: 3px;
+    }
+}

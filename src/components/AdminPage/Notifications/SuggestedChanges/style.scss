@@ -1,0 +1,55 @@
+@import '../../../MainPage/style.scss';
+
+.suggestions-list {
+  margin-top: 1rem;
+}
+
+.suggestion-post > .open-view {
+  cursor: default;
+}
+
+.open-view {
+  .topic-strip {
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  .notification-content {
+    position: relative;
+    cursor: default;
+    .content-title,
+    .content-text {
+      font-size: 1.2rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .delete-container {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $font-gray;
+    grid-column: 3;
+    margin: 0 2rem 1rem 0;
+    svg {
+      margin-top: 2px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .open-view {
+    .notification-content {
+      padding-top: 1rem;
+      .content-title {
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import '../../MainPage/style.scss';
+
+.items-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  padding: 2rem 0 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+  .list-element {
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    width: 100%;
+    box-shadow: 0px 2px 3px #00000029;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+
+    .list-element-name {
+      font-size: 1.5rem;
+      text-align: left;
+      color: $font-darkgray;
+      margin: auto 2rem;
+      padding: 0.5rem 0;
+      cursor: pointer;
+    }
+
+    .link-icon,
+    .info-icon {
+      margin: auto 1.3rem auto 0;
+      font-size: 1.3rem;
+      color: $ns-main-color;
+      cursor: pointer;
+    }
+
+    .pen-icon {
+      margin: auto 1.3rem auto 0;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: $font-gray;
+      &.trash-icon {
+        font-size: 1.2rem;
+        &:hover {
+          font-size: 1.3rem;
+          margin-right: 1.2rem;
+        }
+      }
+      &:hover {
+        font-size: 1.4rem;
+      }
+    }
+
+    .plus-icon {
+      font-size: 26px;
+      color: $ns-main-color;
+      position: unset;
+      transform: unset;
+      margin: 0.8rem auto;
+    }
+
+    .hover-icon-big:hover {
+      font-size: 1.4rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+  .tutor-icons-container {
+    display: flex;
+    .pen-icon {
+      color: $font-gray;
+    }
+  }
+
+  .add-new-item {
+    grid-column: 2;
+    cursor: pointer;
+    &:hover {
+      min-height: 53.2px;
+      max-height: 53.2px;
+      .plus-icon {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .items-list {
+    .list-element > .list-element-name {
+      font-size: 22px;
+      margin: auto 1.5rem auto 2rem;
+      padding: 0.7rem 0;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .items-list {
+    .list-element {
+      .list-element-name {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .items-list {
+    grid-template-columns: 1fr;
+
+    .add-new-item {
+      grid-column: 1;
+    }
+
+    .list-element {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      .list-element-name {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .items-list {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    .list-element {
+      .list-element-name {
+        margin-left: 1rem;
+      }
+      .info-icon {
+        margin-right: 1rem;
+      }
+      .pen-icon {
+        font-size: 1.1rem;
+        &.trash-icon {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .tiles-list .tiles-list-element .plus-icon, .items-list .add-new-item .plus-icon {
+    margin: 0.5rem auto !important;
+  }
+}

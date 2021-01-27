@@ -1,0 +1,66 @@
+@import '../../../MainPage/style.scss';
+
+.admin-list-element {
+  
+  .admin-button {
+    grid-column: 2;
+    width: 8rem;
+    background: $ns-main-color;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin: auto 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+
+    .admin-button-text {
+      cursor: pointer;
+    }
+
+    .admin-text {
+      display: flex;
+      align-items: center;
+      .take-admin-icon {
+        margin-left: 10px;
+        color: $ns-main-color;
+        cursor: pointer;
+        padding-top: 2px;
+      }
+    }
+
+    .add-admin-icon,
+    .admin-icon-box {
+      display: none;
+    }
+  }
+  .add-admin-button {
+    width: 13rem;
+  }
+
+  .on-list-admin {
+    background: none;
+    color: $font-black;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-list-element {
+    .admin-button {
+      width: 4rem;
+      .admin-text,
+      .admin-button-text {
+        display: none;
+      }
+      .add-admin-icon,
+      .admin-icon-box {
+        display: inline-block;
+      }
+      .take-admin-icon-mobile {
+        margin-left: 10px;
+        color: $ns-main-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

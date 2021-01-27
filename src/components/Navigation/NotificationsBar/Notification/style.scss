@@ -1,0 +1,26 @@
+.user-notification-box {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid gray;
+  color: black;
+  margin-bottom: 20px;
+  .user-notification-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    .user-notification-date {
+      font-size: 14px;
+      color: gray;
+    }
+    .user-notification-delete {
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+  .user-notification-text {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}

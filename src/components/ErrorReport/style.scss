@@ -1,0 +1,10 @@
+@import '../MainPage/style.scss';
+
+.report-error-button {
+    position: fixed;
+    background-color: $ns-main-color;
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+    bottom: 1.5rem;
+    right: 2rem;
+}

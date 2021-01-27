@@ -1,0 +1,95 @@
+@import '../../MainPage/style.scss';
+
+.side-menu {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: $font-black;
+  border: 1px solid #cccccc;
+  opacity: 1;
+  background-color: #ffffffe6;
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 62px;
+  z-index: 1;
+  min-height: calc(100vh - 62px);
+
+  .side-menu-header {
+    margin-top: 10px;
+    position: relative;
+
+    .close.side-menu-exit {
+      position: absolute;
+      left: 20px;
+      top: 3px;
+      font-size: 36px;
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    .side-menu-title {
+      font-size: 24px;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  .side-menu-content {
+    font-size: 1.3rem;
+    margin-left: 20px;
+    margin-top: 25px;
+
+    p {
+      cursor: default;
+    }
+
+    .side-menu-option {
+      cursor: pointer;
+    }
+
+    .side-menu-option:hover {
+      font-weight: 500;
+      .country-flag-icon {
+        border: 2px solid black;
+      }
+    }
+
+    .admin-panel-link {
+      color: $font-black;
+    }
+  }
+}
+
+.country-flag-icon {
+  cursor: pointer;
+  &:hover {
+    border: 2px solid black;
+  }
+}
+
+@media (min-height: 500px) {
+  @media (min-width: 550px) {
+    .side-menu {
+      width: 300px;
+
+      .side-menu-header {
+        .side-menu-title {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .side-menu {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 1750px) {
+    .side-menu {
+      width: 500px;
+    }
+  }
+}

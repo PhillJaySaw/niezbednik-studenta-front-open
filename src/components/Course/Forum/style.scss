@@ -1,0 +1,17 @@
+@import '../../MainPage/style.scss';
+
+.course-forum {
+  position: relative;
+
+  .leave-group-icon {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+#textarea {
+  outline: none;
+}

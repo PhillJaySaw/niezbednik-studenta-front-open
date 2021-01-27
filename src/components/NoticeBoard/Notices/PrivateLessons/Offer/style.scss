@@ -1,0 +1,51 @@
+@import '../../../../MainPage/style.scss';
+
+.tutoring-offers-posts-list {
+    margin-top: 0.5rem;
+    .forum-post {
+        margin: 1rem 0 0.5rem;
+    }
+}
+    .notice-post.tutoring-offer {
+    .post-author {
+        font-size: 1.1rem;
+        span:nth-child(2) {
+            font-weight: lighter;
+            font-style: italic;
+        }
+    }
+    .post-reactions {
+        padding: 0 2rem;
+
+        .interested-button {
+            width: max-content;
+            margin-left: auto;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        svg {
+            font-size: 1.2rem;
+            margin-bottom: auto;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .tutoring-offers-posts-list {
+        margin-top: 0;
+    }
+    .notice-post.tutoring-offer {
+        .post-author {
+            grid-column: 1/4;
+            width: 100%;
+            span:first-child, span:nth-child(2) {
+                display: inline-block;
+                width: 100%;
+                margin-right: 140px;
+                padding-right: 80px;
+            }
+        }
+    }
+}

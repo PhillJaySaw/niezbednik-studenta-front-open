@@ -1,0 +1,25 @@
+@import '../MainPage/style.scss';
+
+.page-not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+
+  .page-not-found-title {
+    color: $ns-main-color;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+
+    p:nth-child(1) {
+      font-size: 60px;
+      margin-bottom: 0;
+    }
+
+    p:nth-child(2) {
+      font-size: 20px;
+    }
+  }
+}

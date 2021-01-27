@@ -1,0 +1,13 @@
+.notice-post {
+    cursor: default !important;
+    .open-view {
+        cursor: default;
+    }
+    padding-bottom: 1rem;
+    .submit-button {
+        margin: 0 2rem -0.5rem auto;
+        height: 2rem;
+        line-height: 1.5rem;
+        padding: 0 1rem;
+    }
+}

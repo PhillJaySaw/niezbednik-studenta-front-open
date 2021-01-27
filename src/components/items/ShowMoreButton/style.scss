@@ -1,0 +1,27 @@
+@import '../../MainPage/style.scss';
+
+.more-data {
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  &__button {
+    background-color: $ns-main-color;
+    color: #fff;
+    height: 3rem;
+    line-height: 3rem;
+    width: 12rem;
+    align-items: center;
+  }
+}
+
+.more-data-notifications {
+  display: flex;
+  justify-content: center;
+  &__button-notifications {
+    font-size: 14px;
+    height: 2rem;
+    line-height: 2rem;
+    width: 8rem;
+  }
+}

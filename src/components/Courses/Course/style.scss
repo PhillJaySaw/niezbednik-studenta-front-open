@@ -1,0 +1,184 @@
+@import '../../MainPage/style.scss';
+
+.tiles-list, .course-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 0 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+  .course-list-element {
+    cursor: pointer;
+  }
+
+  .course-list-element.course-list-element__grayed-out {
+    cursor: default;
+  }
+
+  .tiles-list-element, .course-list-element {
+    display: grid;
+    grid-template-columns: auto max-content;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    width: 100%;
+    box-shadow: 0px 2px 3px #00000029;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &__grayed-out {
+      background-color: #f7f7f7;
+    }
+
+    .course-name {
+      font-size: 1.5rem;
+      text-align: left;
+      color: $font-darkgray;
+      margin: 0.5rem 2rem;
+    }
+
+    p {
+      cursor: default;
+    }
+
+    .course-button {
+      grid-column: 2;
+      width: 6rem;
+      height: 2rem;
+      line-height: 1.9rem;
+      margin: auto 2rem;
+      font-size: 1rem;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+
+      p {
+        margin: auto;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .edit-icon {
+      margin: auto 2rem auto 2rem;
+      font-size: 1.3rem;
+      color: $font-gray;
+      cursor: pointer;
+      &:hover {
+        font-size: 1.4rem;
+      }
+    }
+
+    .add-course {
+      background: $ns-main-color;
+      p {
+        cursor: pointer;
+      }
+    }
+
+    .on-list-course {
+      background: none;
+      color: #000;
+    }
+
+    .plus-icon {
+      font-size: 26px;
+      color: $ns-main-color;
+      position: unset;
+      transform: unset;
+      margin: 0.8rem auto;
+      &:hover {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .add-new-course {
+    cursor: pointer;
+  }
+}
+
+.course-list-message {
+  font-size: 1.4rem;
+  padding: 2rem;
+  // background-color: white;
+  // width: 90%;
+  // border-radius: 5px;
+
+  a, a:hover {
+    color: black;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 1000px) {
+  .tiles-list, .course-list > .tiles-list-element, .course-list-element {
+    .course-name {
+      font-size: 22px;
+      margin: 0.7rem 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .tiles-list, .course-list {
+    padding-top: 1.5rem;
+
+    .tiles-list-element, .course-list-element {
+      .course-name {
+        font-size: 20px;
+        margin: 0.5rem 0.5rem 0.5rem 1rem;
+      }
+
+      .course-button {
+        width: 44px;
+        height: 2rem;
+        p {
+          display: none;
+        }
+        .icon {
+          display: inline-block;
+        }
+      }
+
+      .edit-icon {
+        margin: auto 2rem;
+      }
+    }
+  }
+}
+
+.add-new-course:hover {
+  min-height: 53.2px;
+  max-height: 53.2px;
+  .plus-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tiles-list, .course-list {
+    .tiles-list-element, .course-list-element {
+      margin-bottom: 1rem;
+
+      .course-button {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+
+      .plus-icon {
+        font-size: 24px;
+      }
+      .edit-icon {
+        font-size: 1.1rem;
+        margin: auto 1rem;
+      }
+    }
+  }
+}

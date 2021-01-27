@@ -1,0 +1,130 @@
+@import '../MainPage/style.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Phillipe napraw :/
+.title-bar__title, .title-bar__icons, .categories {
+    display: none;
+}*/
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.content-container {
+  width: 100%;
+  text-align: center;
+}
+
+.login-logo {
+  width: 400px;
+}
+
+.login-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #494949;
+  text-align: center;
+  font-size: 32px;
+}
+
+.login-btn {
+  width: 165px;
+  height: 53px;
+  text-align: center;
+  background: $ns-main-color 0% 0% no-repeat padding-box;
+  border: 1px solid #b1b1b1;
+  cursor: pointer;
+  margin: 0 auto 1rem;
+  display: flex;
+  box-shadow: 0 2px 3px #00000030;
+}
+
+.login-btn-text {
+  margin: auto;
+  font-size: 23px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.raport-container {
+  padding-top: 10px;
+}
+
+.login-raport {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #a2a2a2;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media (max-width: 950px) {
+  .login-logo {
+    padding-top: 3rem;
+    width: 350px;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+
+  .login-btn {
+    width: 112px;
+    height: 43px;
+  }
+
+  .login-btn-text {
+    font-size: 18px;
+  }
+
+  .login-raport {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-logo {
+    width: 280px;
+  }
+
+  .login-title {
+    font-size: 26px;
+  }
+
+  .login-btn {
+    width: 6rem;
+    height: 2.3rem;
+  }
+
+  .login-btn-text {
+    font-size: 18px;
+  }
+
+  .login-raport {
+    font-size: 13px;
+  }
+}

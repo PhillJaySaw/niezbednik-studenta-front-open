@@ -1,0 +1,128 @@
+@import '../../MainPage/style.scss';
+
+.all-info-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  grid-column-gap: 2rem;
+  .info-container {
+    .info-title {
+      font-size: 1.5rem;
+      color: $ns-main-color;
+    }
+    .title-line {
+      height: 1px;
+      width: 5rem;
+      background-color: $ns-main-color;
+    }
+    &:not(.info-container:last-child) {
+      max-width: calc(50% - 1rem);
+      flex-basis: calc(50% - 1rem);
+    }
+    &.info-container:last-child {
+      width: 100%;
+      .items-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .list-links {
+      margin-top: 15px;
+      padding-right: 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 500px;
+      ul {
+        li {
+          list-style-type: none;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+
+          a {
+            color: #007bff;
+            font-size: 20px;
+            word-wrap: break-word;
+            word-break: break-all;
+          }
+        }
+      }
+    }
+
+    .items-list {
+      grid-template-columns: 1fr;
+      padding-top: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .info-container:not(.info-container:last-child),
+    .info-container.info-container:last-child {
+      max-width: 100%;
+      flex-basis: unset;
+      width: 100%;
+      > .items-list {
+        grid-template-columns: 1fr;
+        > .list-element {
+          margin-left: 0;
+        }
+      }
+      .info-title {
+        font-size: 24px;
+      }
+    }
+    .info-container {
+      .info-title {
+        font-size: 24px;
+      }
+      .list-links {
+        ul > li > a {
+          font-size: 16px;
+        }
+      }
+      // &.info-container:last-child {
+      //   > .items-list {
+      //     grid-template-columns: 1fr;
+      //   }
+      // }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .info-container {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .info-container {
+      .list-links {
+        max-width: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .info-container {
+      margin-top: 30px;
+      .info-title {
+        font-size: 20px;
+      }
+    }
+    .info-container {
+      .info-title {
+        font-size: 20px;
+      }
+      .list-links {
+        ul > li > a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

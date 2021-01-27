@@ -1,0 +1,56 @@
+@import '../../MainPage/style.scss';
+
+.current-option-content, .search-course-filter {
+    .add-item-button {
+        width: max-content;
+        min-width: 10rem;
+        text-align: center;
+        height: 40px;
+        background: $ns-main-color 0% 0% no-repeat padding-box;
+        color: white;
+        line-height: 40px;
+        position: relative;
+        cursor: pointer;
+
+        p {
+            display: inline-block;
+        }
+    }
+}
+
+.bookmark-menu {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-row-gap: 1rem;
+    width: 100%;
+    padding: 3rem 0 0rem;
+
+    .add-item-button {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .search-input, .searchbox-with-checkboxes {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .bookmark-menu {
+        padding-top: 1.5rem;
+        > .add-item-button {
+        grid-row: 2;
+        margin: auto;
+        }
+
+        > .search-input, .searchbox-with-checkboxes {
+        grid-column: 1 / 3;
+        margin: auto;
+        }
+        .search-checkboxes {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
